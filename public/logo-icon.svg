@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 88" fill="none">
+  <defs>
+    <linearGradient id="uatGrad" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#CC1A2D"/>
+      <stop offset="60%" stop-color="#B0151F"/>
+      <stop offset="100%" stop-color="#8A0F18"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="40" y1="0" x2="40" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D42235"/>
+      <stop offset="100%" stop-color="#C0192B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left arm of U -->
+  <rect x="2" y="22" width="21" height="56" rx="5" fill="url(#uatGrad)"/>
+
+  <!-- Right arm of U -->
+  <rect x="57" y="22" width="21" height="56" rx="5" fill="url(#uatGrad)"/>
+
+  <!-- Bottom bar of U (rounded corners at bottom) -->
+  <rect x="2" y="62" width="76" height="24" rx="12" fill="url(#uatGrad)"/>
+
+  <!-- Arrow shaft (fills gap inside U, merges with bottom bar) -->
+  <rect x="29.5" y="26" width="21" height="56" fill="url(#uatGrad)"/>
+
+  <!-- Arrow head (triangle pointing up, extends above U arms) -->
+  <polygon points="40,2 16,26 64,26" fill="url(#arrowGrad)"/>
+</svg>

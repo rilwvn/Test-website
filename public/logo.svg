@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" fill="none">
+  <defs>
+    <linearGradient id="iconGrad" x1="55" y1="8" x2="55" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#CC1A2D"/>
+      <stop offset="60%" stop-color="#B0151F"/>
+      <stop offset="100%" stop-color="#8A0F18"/>
+    </linearGradient>
+    <linearGradient id="arrowG" x1="55" y1="8" x2="55" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D42235"/>
+      <stop offset="100%" stop-color="#C0192B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── ICON MARK ── -->
+  <!-- Left arm -->
+  <rect x="10" y="30" width="19" height="72" rx="5" fill="url(#iconGrad)"/>
+  <!-- Right arm -->
+  <rect x="75" y="30" width="19" height="72" rx="5" fill="url(#iconGrad)"/>
+  <!-- Bottom bar -->
+  <rect x="10" y="84" width="84" height="20" rx="10" fill="url(#iconGrad)"/>
+  <!-- Arrow shaft -->
+  <rect x="42" y="34" width="18" height="70" fill="url(#iconGrad)"/>
+  <!-- Arrow head -->
+  <polygon points="51,8 28,34 74,34" fill="url(#arrowG)"/>
+
+  <!-- ── DIVIDER LINE ── -->
+  <line x1="118" y1="24" x2="118" y2="96" stroke="#F0A8B5" stroke-width="1.5"/>
+
+  <!-- ── WORDMARK ── -->
+  <!-- UAT — dark navy, bold -->
+  <text
+    x="138" y="78"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="62"
+    letter-spacing="-1"
+    fill="#1A1B2E"
+  >UAT</text>
+
+  <!-- SOLUTIONS INC. — crimson, tracked -->
+  <text
+    x="141" y="100"
+    font-family="'Arial', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="700"
+    font-size="17"
+    letter-spacing="5"
+    fill="#C0192B"
+  >SOLUTIONS INC.</text>
+</svg>

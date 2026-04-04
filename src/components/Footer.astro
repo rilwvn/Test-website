@@ -9,9 +9,29 @@ const year = new Date().getFullYear();
 
       <!-- Brand column -->
       <div class="lg:col-span-2">
-        <a href="/" class="flex flex-col leading-none mb-6">
-          <span class="font-display font-bold text-cream text-xl tracking-tight">UAT SOLUTIONS</span>
-          <span class="font-body font-light text-cream/40 text-[10px] tracking-[0.25em] uppercase mt-0.5">Inc. — Freight Brokerage</span>
+        <a href="/" class="flex items-center gap-3 mb-6 group">
+          <!-- U-Arrow Icon -->
+          <svg class="h-10 w-auto flex-shrink-0" viewBox="0 0 80 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="ftIconGrad" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#CC1A2D"/>
+                <stop offset="60%" stop-color="#B0151F"/>
+                <stop offset="100%" stop-color="#8A0F18"/>
+              </linearGradient>
+            </defs>
+            <rect x="2"    y="22" width="21" height="56" rx="5"  fill="url(#ftIconGrad)"/>
+            <rect x="57"   y="22" width="21" height="56" rx="5"  fill="url(#ftIconGrad)"/>
+            <rect x="2"    y="62" width="76" height="24" rx="12" fill="url(#ftIconGrad)"/>
+            <rect x="29.5" y="26" width="21" height="56"         fill="url(#ftIconGrad)"/>
+            <polygon points="40,2 16,26 64,26" fill="#CC1A2D"/>
+          </svg>
+          <!-- Divider -->
+          <span class="h-8 w-px opacity-30" style="background: #F0A8B5;"></span>
+          <!-- Wordmark -->
+          <span class="flex flex-col leading-none">
+            <span class="font-black text-cream text-xl tracking-tight group-hover:text-cream/80 transition-colors" style="font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em;">UAT</span>
+            <span class="text-[9px] font-bold tracking-[0.22em] uppercase" style="color: #C0192B;">SOLUTIONS INC.</span>
+          </span>
         </a>
         <p class="text-cream/60 text-sm leading-relaxed max-w-xs mb-6">
           Connecting shippers and carriers across North America with speed, reliability, and cost-efficiency. Your freight moves — we make sure of it.
