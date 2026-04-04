@@ -1,0 +1,76 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-cream">
+  <!-- Main footer -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
+      <!-- Brand column -->
+      <div class="lg:col-span-2">
+        <a href="/" class="flex flex-col leading-none mb-6">
+          <span class="font-display font-bold text-cream text-xl tracking-tight">UAT SOLUTIONS</span>
+          <span class="font-body font-light text-cream/40 text-[10px] tracking-[0.25em] uppercase mt-0.5">Inc. — Freight Brokerage</span>
+        </a>
+        <p class="text-cream/60 text-sm leading-relaxed max-w-xs mb-6">
+          Connecting shippers and carriers across North America with speed, reliability, and cost-efficiency. Your freight moves — we make sure of it.
+        </p>
+        <div class="flex flex-col gap-2 text-sm text-cream/50">
+          <a href="tel:16477049045" class="hover:text-cream transition-colors">
+            📞 1-647-704-9045
+          </a>
+          <a href="mailto:contact@uat-solutions.com" class="hover:text-cream transition-colors">
+            ✉️ contact@uat-solutions.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-cream/40 text-xs tracking-[0.2em] uppercase font-medium mb-5">Services</h4>
+        <ul class="flex flex-col gap-3">
+          {[
+            ['Full Truckload (FTL)', '/services#ftl'],
+            ['Less-Than-Truckload (LTL)', '/services#ltl'],
+            ['Temperature Controlled', '/services#reefer'],
+            ['Carrier Partnerships', '/services#carriers'],
+          ].map(([label, href]) => (
+            <li>
+              <a href={href} class="text-cream/60 text-sm hover:text-cream transition-colors link-underline">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-cream/40 text-xs tracking-[0.2em] uppercase font-medium mb-5">Company</h4>
+        <ul class="flex flex-col gap-3">
+          {[
+            ['Home', '/'],
+            ['Services', '/services'],
+            ['News', '/news'],
+            ['Contact Us', '/contact'],
+          ].map(([label, href]) => (
+            <li>
+              <a href={href} class="text-cream/60 text-sm hover:text-cream transition-colors link-underline">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-cream/30 text-xs">
+      <span>© {year} UAT Solutions Inc. All rights reserved.</span>
+      <span class="hidden sm:block">Licensed Freight Broker — Serving Canada & United States</span>
+    </div>
+  </div>
+</footer>

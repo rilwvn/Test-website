@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import { getCollection } from 'astro:content';
+
+const allNews = await getCollection('news');
+const posts = allNews.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featured = posts.filter(p => p.data.featured);
+const rest = posts.filter(p => !p.data.featured);
+---
+
+<Layout
+  title="Freight Industry News & Insights | UAT Solutions"
+  description="Stay up to date with the latest freight market trends, industry news, and logistics insights from the UAT Solutions team."
+>
+
+  <!-- Page header -->
+  <section class="bg-dark pt-20 pb-32 px-6 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] aspect-[3/1] bg-cream hero-arch" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <span class="text-cream/50 text-xs tracking-[0.3em] uppercase font-medium">Stay Informed</span>
+      <h1 class="font-display text-5xl lg:text-7xl font-bold text-cream mt-4 leading-tight">
+        Freight <em class="italic font-normal">News</em>
+      </h1>
+      <p class="text-cream/70 text-base lg:text-lg mt-6">
+        Industry insights, company updates, and logistics intelligence.
+      </p>
+    </div>
+  </section>
+
+  <!-- News grid -->
+  <section class="bg-cream py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      {posts.length === 0 ? (
+        <div class="text-center py-24">
+          <p class="font-display text-2xl text-mid italic">No articles yet — check back soon.</p>
+        </div>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-dark/10">
+          {posts.map((post, i) => (
+            <NewsCard
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              slug={post.slug}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              featured={i === 0}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="bg-dark py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">Stay Updated</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-bold text-cream mt-4 mb-4 leading-tight">
+        Get freight insights <em class="italic font-normal">delivered</em>
+      </h2>
+      <p class="text-cream/60 mb-8">
+        Market updates, rate trends, and logistics tips — straight to your inbox.
+      </p>
+      <a href="/contact" class="inline-block bg-accent hover:bg-accent-hover text-light font-semibold px-8 py-4 text-sm tracking-wide transition-colors">
+        Contact Us to Subscribe
+      </a>
+    </div>
+  </section>
+
+</Layout>

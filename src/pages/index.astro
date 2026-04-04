@@ -1,0 +1,421 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NewsCard from '../components/NewsCard.astro';
+import { getCollection } from 'astro:content';
+
+const allNews = await getCollection('news');
+const latestNews = allNews
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<Layout
+  title="Efficient Freight Brokerage Solutions Across North America | UAT Solutions"
+  description="UAT Solutions Inc. connects shippers and carriers across North America with speed, reliability, and cost-efficiency. Get a free freight quote today."
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="bg-dark relative overflow-hidden min-h-[92vh] flex flex-col">
+
+    <!-- Arch / cream shape at bottom -->
+    <div
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[110%] lg:w-[100%] aspect-[2/1] bg-cream hero-arch"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-20 pb-40 md:pb-52">
+      <p class="fade-up text-cream/50 text-xs tracking-[0.3em] uppercase mb-6 font-medium">
+        Freight Brokerage · North America
+      </p>
+      <h1 class="fade-up fade-up-delay-1 font-display text-cream font-bold leading-[1.05] mb-6">
+        <span class="block text-[clamp(3rem,8vw,6.5rem)]">Move More.</span>
+        <span class="block text-[clamp(3rem,8vw,6.5rem)] italic font-normal">Ship Smarter.</span>
+      </h1>
+      <p class="fade-up fade-up-delay-2 text-cream/70 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-10">
+        UAT Solutions Inc. connects shippers and carriers across North America
+        with speed, reliability, and cost-efficiency.
+      </p>
+      <div class="fade-up fade-up-delay-3 flex flex-col sm:flex-row items-center gap-4">
+        <a
+          href="/contact"
+          class="bg-accent hover:bg-accent-hover text-light font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
+        >
+          Get a Free Quote
+        </a>
+        <a
+          href="/services"
+          class="text-cream/70 hover:text-cream text-sm font-medium flex items-center gap-2 transition-colors"
+        >
+          View Our Services
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES OVERVIEW
+  ═══════════════════════════════════════════ -->
+  <section class="bg-cream py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section label -->
+      <div class="flex items-center gap-4 mb-14">
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">What We Move</span>
+        <span class="flex-1 h-px bg-dark/10 max-w-xs"></span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-dark/10">
+
+        <!-- FTL -->
+        <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
+          <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Full Truckload</p>
+            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+              FTL <span class="italic font-normal">Shipping</span>
+            </h3>
+            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+              Dedicated capacity for time-sensitive loads. Nationwide coverage, competitive rates, and proactive status updates every step of the way.
+            </p>
+            <a href="/services#ftl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+              Learn more
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- LTL -->
+        <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
+          <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Less-Than-Truckload</p>
+            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+              LTL <span class="italic font-normal">Freight</span>
+            </h3>
+            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+              Cost-effective for smaller shipments. Our carrier network and optimized routing deliver real-time visibility without the full-truck price tag.
+            </p>
+            <a href="/services#ltl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+              Learn more
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reefer -->
+        <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
+          <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Temperature-Controlled</p>
+            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+              Reefer <span class="italic font-normal">Transport</span>
+            </h3>
+            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+              Protect high-value and perishable freight. Our vetted reefer carriers maintain precise temperature control from pickup to delivery.
+            </p>
+            <a href="/services#reefer" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+              Learn more
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT / VALUE PROPOSITION
+  ═══════════════════════════════════════════ -->
+  <section class="bg-cream-2 py-24 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image block -->
+      <div class="relative">
+        <div
+          class="aspect-[4/3] bg-dark-2 overflow-hidden"
+          style="background: linear-gradient(135deg, #1c2b38 0%, #0f1923 60%, #1a3040 100%);"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&auto=format&fit=crop&q=80"
+            alt="Freight truck on highway at dusk"
+            class="w-full h-full object-cover mix-blend-overlay opacity-60"
+            loading="lazy"
+          />
+          <!-- Decorative stat overlays -->
+          <div class="absolute bottom-6 left-6 bg-cream p-5">
+            <p class="font-display text-4xl font-bold text-dark">98%</p>
+            <p class="text-mid text-xs tracking-wide mt-1">On-Time Delivery Rate</p>
+          </div>
+        </div>
+        <!-- Accent border -->
+        <div class="absolute -bottom-3 -right-3 w-full h-full border border-accent -z-10" aria-hidden="true"></div>
+      </div>
+
+      <!-- Text block -->
+      <div>
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">About UAT Solutions</span>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-4 mb-6 leading-tight">
+          North America's <em class="italic font-normal">Trusted</em><br /> Freight Partner
+        </h2>
+        <p class="text-mid leading-relaxed mb-8 text-base">
+          Since day one, UAT Solutions Inc. has been dedicated to removing the friction from freight.
+          We connect shippers with the right carriers — fast, reliably, and at competitive rates —
+          so your supply chain never misses a beat.
+        </p>
+
+        <ul class="flex flex-col gap-5 mb-10">
+          {[
+            {
+              title: 'Dedicated Account Management',
+              desc: 'Tailored logistics solutions designed to meet your unique business needs — with a real person in your corner.',
+            },
+            {
+              title: 'Transparent Pricing, Zero Surprises',
+              desc: 'Competitive rates, no hidden fees. You always know exactly what you\'re paying and why.',
+            },
+            {
+              title: 'Nationwide Carrier Network',
+              desc: 'Access to thousands of vetted carriers across North America ready to move your freight when you need it.',
+            },
+          ].map(item => (
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <div>
+                <p class="font-semibold text-dark text-sm">{item.title}</p>
+                <p class="text-mid text-sm mt-0.5 leading-relaxed">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="/services"
+          class="inline-flex items-center gap-2 bg-dark hover:bg-dark-2 text-cream font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors"
+        >
+          Explore Our Services
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-dark py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+        {[
+          { num: '98%',  label: 'On-Time Delivery' },
+          { num: '2',    label: 'Countries Served' },
+          { num: '24/7', label: 'Support Available' },
+          { num: '$0',   label: 'Hidden Fees' },
+        ].map(stat => (
+          <div class="text-center py-6 px-4">
+            <p class="font-display text-4xl lg:text-5xl font-bold text-cream">{stat.num}</p>
+            <p class="text-cream/40 text-xs tracking-[0.2em] uppercase mt-2">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EDITORIAL IMAGE FEATURE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-cream py-24 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text block -->
+      <div class="order-2 lg:order-1">
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">How We Work</span>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-4 mb-6 leading-tight">
+          A <em class="italic font-normal">smarter</em> way<br /> to ship freight
+        </h2>
+        <p class="text-mid leading-relaxed mb-6">
+          We don't just find you a truck — we manage the entire process. From the moment you contact us,
+          we match your shipment to the best available carrier, negotiate competitive rates, and keep you
+          informed from pickup to delivery.
+        </p>
+        <p class="text-mid leading-relaxed mb-10">
+          Whether you're a small business shipping a few pallets or a large enterprise managing complex
+          supply chains, UAT Solutions scales to your needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="bg-accent hover:bg-accent-hover text-light font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors text-center">
+            Start Shipping Today
+          </a>
+          <a href="/contact" class="border border-dark text-dark hover:bg-dark hover:text-cream font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors text-center">
+            Talk to an Expert
+          </a>
+        </div>
+      </div>
+
+      <!-- Image mosaic -->
+      <div class="order-1 lg:order-2 grid grid-cols-2 gap-3">
+        <div class="aspect-square bg-dark-2 overflow-hidden col-span-2">
+          <img
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=80"
+            alt="Logistics warehouse"
+            class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div class="aspect-square bg-dark-2 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=400&auto=format&fit=crop&q=80"
+            alt="Shipping containers"
+            class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div class="aspect-square bg-accent flex items-end p-5">
+          <p class="font-display text-light text-xl font-bold italic leading-tight">
+            "Your freight always comes first."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-cream-2 py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex items-center gap-4 mb-14">
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">Client Stories</span>
+        <span class="flex-1 h-px bg-dark/10 max-w-xs"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Testimonial 1 -->
+        <blockquote class="bg-cream p-8 lg:p-10 relative">
+          <div class="font-display text-8xl text-accent/20 absolute top-4 left-6 leading-none select-none">"</div>
+          <div class="relative z-10">
+            <p class="font-display text-xl lg:text-2xl text-dark italic leading-snug mb-8">
+              "UAT Solutions transformed how we manage freight. Their team is proactive, rates are competitive,
+              and we've cut our shipping delays by over <strong class="font-bold not-italic">30%</strong>.
+              They're not just a broker — they're a true logistics partner."
+            </p>
+            <footer class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-dark-2 flex items-center justify-center text-cream font-display font-bold text-sm">M</div>
+              <div>
+                <cite class="not-italic font-semibold text-dark text-sm">Marcus T.</cite>
+                <p class="text-mid text-xs mt-0.5">Supply Chain Director · Chicago, IL</p>
+              </div>
+              <div class="ml-auto text-accent text-sm tracking-wider">★★★★★</div>
+            </footer>
+          </div>
+        </blockquote>
+
+        <!-- Testimonial 2 -->
+        <blockquote class="bg-dark p-8 lg:p-10 relative">
+          <div class="font-display text-8xl text-cream/10 absolute top-4 left-6 leading-none select-none">"</div>
+          <div class="relative z-10">
+            <p class="font-display text-xl lg:text-2xl text-cream italic leading-snug mb-8">
+              "After years of missed pickups and vague pricing, switching to UAT Solutions was a breath of
+              fresh air. From the very first quote, they matched us with a reliable carrier within hours,
+              and our shipment arrived on time without a single hiccup."
+            </p>
+            <footer class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center text-cream font-display font-bold text-sm">J</div>
+              <div>
+                <cite class="not-italic font-semibold text-cream text-sm">Jennifer R.</cite>
+                <p class="text-cream/50 text-xs mt-0.5">Operations Manager · St. Jérôme, QC</p>
+              </div>
+              <div class="ml-auto text-accent text-sm tracking-wider">★★★★★</div>
+            </footer>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       NEWS SECTION
+  ═══════════════════════════════════════════ -->
+  {latestNews.length > 0 && (
+    <section class="bg-cream py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="flex items-end justify-between mb-14">
+          <div>
+            <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold block mb-3">Latest Updates</span>
+            <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark leading-tight">
+              Freight <em class="italic font-normal">News</em>
+            </h2>
+          </div>
+          <a href="/news" class="hidden sm:inline-flex items-center gap-2 text-dark text-sm font-medium hover:text-accent transition-colors">
+            All articles
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-dark/10">
+          {latestNews.map((post, i) => (
+            <NewsCard
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              slug={post.slug}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              featured={i === 0}
+            />
+          ))}
+        </div>
+
+        <div class="mt-8 sm:hidden text-center">
+          <a href="/news" class="inline-flex items-center gap-2 text-dark text-sm font-medium hover:text-accent transition-colors">
+            All articles →
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="bg-dark py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 60% 50%, rgba(201,49,26,0.12) 0%, transparent 70%);" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto text-center">
+      <h2 class="font-display text-4xl lg:text-6xl font-bold text-cream leading-tight mb-6">
+        Ready to <em class="italic font-normal">move</em><br /> your freight?
+      </h2>
+      <p class="text-cream/60 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+        Get in touch with our team today. We'll match you with the right carrier,
+        at the right price, with zero hassle.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="bg-accent hover:bg-accent-hover text-light font-semibold px-9 py-4 text-sm tracking-wide transition-colors">
+          Get a Free Quote
+        </a>
+        <a href="tel:16477049045" class="text-cream/70 hover:text-cream font-medium text-sm flex items-center gap-2 transition-colors">
+          📞 1-647-704-9045
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Brand Colors */
+  --color-dark: #0f1923;
+  --color-dark-2: #1c2b38;
+  --color-cream: #f4efe8;
+  --color-cream-2: #ede7de;
+  --color-accent: #c9311a;
+  --color-accent-hover: #a82714;
+  --color-mid: #7a736d;
+  --color-light: #ffffff;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Spacing scale additions */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-28: 7rem;
+  --spacing-36: 9rem;
+}
+
+/* Base */
+html {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-cream);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Display headings use Playfair */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Ticker animation */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+
+/* Mobile nav */
+#mobile-nav {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.35s ease;
+}
+#mobile-nav.closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-nav.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Nav sticky style */
+.nav-scrolled {
+  background: rgba(15, 25, 35, 0.97) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Hero arch shape */
+.hero-arch {
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15,25,35,0.12);
+}
+
+/* Underline link style */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.link-underline:hover::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* Prose overrides for news articles */
+.prose-uat {
+  --tw-prose-body: #0f1923;
+  --tw-prose-headings: #0f1923;
+  --tw-prose-links: #c9311a;
+  --tw-prose-bold: #0f1923;
+  --tw-prose-quotes: #0f1923;
+  --tw-prose-quote-borders: #c9311a;
+  font-family: var(--font-body);
+}
+.prose-uat h2, .prose-uat h3 {
+  font-family: var(--font-display);
+}

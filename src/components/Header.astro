@@ -1,0 +1,117 @@
+---
+const navLinks = [
+  { label: 'Home',     href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'News',     href: '/news' },
+  { label: 'Contact',  href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!-- Announcement Ticker -->
+<div class="bg-dark text-cream/80 text-xs overflow-hidden py-2.5 relative z-50">
+  <div class="flex ticker-track">
+    {Array(2).fill(null).map(() => (
+      <span class="flex items-center gap-8 px-8">
+        <span>✦ North America's Trusted Freight Partner</span>
+        <span>✦ FTL · LTL · Temperature-Controlled Shipping</span>
+        <span>✦ 1-647-704-9045</span>
+        <span>✦ contact@uat-solutions.com</span>
+        <span>✦ Serving Canada & the United States</span>
+        <span>✦ Competitive Rates · Zero Hidden Fees</span>
+      </span>
+    ))}
+  </div>
+</div>
+
+<!-- Main Navigation -->
+<header
+  id="site-header"
+  class="sticky top-0 z-40 bg-dark transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
+
+    <!-- Logo -->
+    <a href="/" class="flex flex-col leading-none group" aria-label="UAT Solutions Home">
+      <span class="font-display font-bold text-cream text-lg lg:text-xl tracking-tight group-hover:text-cream/80 transition-colors">
+        UAT SOLUTIONS
+      </span>
+      <span class="font-body font-light text-cream/50 text-[10px] tracking-[0.25em] uppercase">
+        Inc. — Freight Brokerage
+      </span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'font-body text-sm font-medium tracking-wide transition-colors',
+            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+              ? 'text-cream'
+              : 'text-cream/60 hover:text-cream',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="ml-2 bg-accent hover:bg-accent-hover text-light text-sm font-semibold px-5 py-2.5 transition-colors"
+      >
+        Get a Quote
+      </a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      id="hamburger-btn"
+      class="lg:hidden flex flex-col gap-1.5 p-2 text-cream"
+      aria-label="Open menu"
+    >
+      <span class="block w-6 h-0.5 bg-current"></span>
+      <span class="block w-6 h-0.5 bg-current"></span>
+      <span class="block w-4 h-0.5 bg-current"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav Drawer -->
+<div
+  id="mobile-nav"
+  class="closed fixed inset-0 z-50 bg-dark flex flex-col lg:hidden"
+>
+  <div class="flex items-center justify-between px-6 h-16 border-b border-white/10">
+    <a href="/" class="flex flex-col leading-none">
+      <span class="font-display font-bold text-cream text-lg tracking-tight">UAT SOLUTIONS</span>
+      <span class="font-body font-light text-cream/50 text-[10px] tracking-[0.25em] uppercase">Inc.</span>
+    </a>
+    <button id="mobile-close" class="text-cream/70 hover:text-cream p-2" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <nav class="flex flex-col px-6 pt-10 gap-2">
+    {navLinks.map(link => (
+      <a
+        href={link.href}
+        class="font-display text-3xl text-cream/80 hover:text-cream py-2 border-b border-white/5 transition-colors"
+      >
+        {link.label}
+      </a>
+    ))}
+    <a
+      href="/contact"
+      class="mt-6 inline-block bg-accent hover:bg-accent-hover text-light text-base font-semibold px-6 py-3 text-center transition-colors"
+    >
+      Get a Free Quote
+    </a>
+  </nav>
+  <div class="mt-auto px-6 pb-10 text-cream/40 text-sm">
+    <p>1-647-704-9045</p>
+    <p>contact@uat-solutions.com</p>
+  </div>
+</div>

@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact UAT Solutions | Reliable Freight Brokerage Services"
+  description="Get in touch for reliable freight solutions and logistics support. Call 1-647-704-9045 or email contact@uat-solutions.com."
+>
+
+  <!-- Page header -->
+  <section class="bg-dark pt-20 pb-32 px-6 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] aspect-[3/1] bg-cream hero-arch" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <span class="text-cream/50 text-xs tracking-[0.3em] uppercase font-medium">Reach Out</span>
+      <h1 class="font-display text-5xl lg:text-7xl font-bold text-cream mt-4 leading-tight">
+        Let's <em class="italic font-normal">talk</em> freight.
+      </h1>
+      <p class="text-cream/70 text-base lg:text-lg mt-6">
+        Get in touch for reliable freight solutions and logistics support.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact grid -->
+  <section class="bg-cream py-20 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16">
+
+      <!-- Contact info -->
+      <div class="lg:col-span-2">
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">Contact Info</span>
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-dark mt-4 mb-8 leading-tight">
+          We're here <em class="italic font-normal">for you</em>
+        </h2>
+
+        <div class="flex flex-col gap-8">
+          <div class="flex gap-5 items-start">
+            <div class="w-11 h-11 bg-dark flex items-center justify-center flex-shrink-0 text-cream text-lg">📞</div>
+            <div>
+              <p class="font-semibold text-dark text-sm mb-1">Call Us</p>
+              <a href="tel:16477049045" class="text-mid hover:text-dark transition-colors text-sm link-underline">
+                1-647-704-9045
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-11 h-11 bg-dark flex items-center justify-center flex-shrink-0 text-cream text-lg">✉️</div>
+            <div>
+              <p class="font-semibold text-dark text-sm mb-1">Email Us</p>
+              <a href="mailto:contact@uat-solutions.com" class="text-mid hover:text-dark transition-colors text-sm link-underline">
+                contact@uat-solutions.com
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-11 h-11 bg-dark flex items-center justify-center flex-shrink-0 text-cream text-lg">🕐</div>
+            <div>
+              <p class="font-semibold text-dark text-sm mb-1">Hours</p>
+              <p class="text-mid text-sm">Monday – Friday: 8am – 6pm ET</p>
+              <p class="text-mid text-sm">Urgent loads: 24/7 by phone</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-11 h-11 bg-dark flex items-center justify-center flex-shrink-0 text-cream text-lg">🌎</div>
+            <div>
+              <p class="font-semibold text-dark text-sm mb-1">Coverage</p>
+              <p class="text-mid text-sm">Canada & United States</p>
+              <p class="text-mid text-sm">Cross-border specialists</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote from testimonial -->
+        <blockquote class="mt-12 border-l-2 border-accent pl-5">
+          <p class="font-display text-base italic text-dark leading-relaxed">
+            "UAT Solutions isn't just moving freight — they're genuinely invested in keeping your supply chain moving."
+          </p>
+          <cite class="not-italic text-mid text-xs mt-3 block">— Jennifer R., Operations Manager</cite>
+        </blockquote>
+      </div>
+
+      <!-- Contact form -->
+      <div class="lg:col-span-3 bg-cream-2 p-8 lg:p-10">
+        <h3 class="font-display text-2xl font-bold text-dark mb-2">Send an Inquiry</h3>
+        <p class="text-mid text-sm mb-8">We typically respond within a few hours during business days.</p>
+
+        <form
+          action="https://formsubmit.co/contact@uat-solutions.com"
+          method="POST"
+          class="flex flex-col gap-5"
+        >
+          <!-- Honeypot -->
+          <input type="text" name="_honey" class="hidden" />
+          <!-- Disable captcha -->
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Success redirect -->
+          <input type="hidden" name="_next" value="https://uat-solutions.com/contact?sent=true" />
+          <input type="hidden" name="_subject" value="New Freight Inquiry — UAT Solutions" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5">
+              <label for="name" class="text-dark text-xs font-semibold tracking-wide uppercase">Your Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jane Smith"
+                class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors placeholder:text-mid/50"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="company" class="text-dark text-xs font-semibold tracking-wide uppercase">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Acme Corp."
+                class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors placeholder:text-mid/50"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="email" class="text-dark text-xs font-semibold tracking-wide uppercase">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="jane@company.com"
+              class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors placeholder:text-mid/50"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="phone" class="text-dark text-xs font-semibold tracking-wide uppercase">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(555) 000-0000"
+              class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors placeholder:text-mid/50"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="service" class="text-dark text-xs font-semibold tracking-wide uppercase">Service Needed</label>
+            <select
+              id="service"
+              name="service"
+              class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors appearance-none"
+            >
+              <option value="">Select a service...</option>
+              <option value="FTL">Full Truckload (FTL)</option>
+              <option value="LTL">Less-Than-Truckload (LTL)</option>
+              <option value="Reefer">Temperature-Controlled (Reefer)</option>
+              <option value="Other">Other / Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="inquiry" class="text-dark text-xs font-semibold tracking-wide uppercase">Your Inquiry *</label>
+            <textarea
+              id="inquiry"
+              name="inquiry"
+              required
+              rows="5"
+              placeholder="Tell us about your freight needs — origin, destination, type of goods, timeline..."
+              class="bg-cream border border-dark/20 focus:border-dark px-4 py-3 text-sm text-dark outline-none transition-colors resize-y placeholder:text-mid/50"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-accent hover:bg-accent-hover text-light font-semibold px-8 py-4 text-sm tracking-wide transition-colors mt-2"
+          >
+            Submit Your Inquiry →
+          </button>
+        </form>
+
+        <!-- Success message (shown via JS if ?sent=true) -->
+        <div id="success-msg" class="hidden mt-6 p-4 bg-dark/5 border border-dark/10 text-center">
+          <p class="font-display text-lg text-dark font-bold">Message received!</p>
+          <p class="text-mid text-sm mt-1">We'll get back to you within a few hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // Show success banner if redirected back with ?sent=true
+  if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+    document.getElementById('success-msg')?.classList.remove('hidden');
+    window.history.replaceState({}, '', '/contact');
+  }
+</script>

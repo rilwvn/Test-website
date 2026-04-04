@@ -1,0 +1,76 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  category: string;
+  slug: string;
+  image?: string;
+  imageAlt?: string;
+  featured?: boolean;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  category,
+  slug,
+  image,
+  imageAlt = '',
+  featured = false,
+} = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-CA', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class:list={['card-lift group', featured ? 'md:col-span-2' : '']}>
+  <a href={`/news/${slug}`} class="block h-full bg-cream-2 overflow-hidden">
+
+    <!-- Image area -->
+    <div class:list={['overflow-hidden bg-dark-2 relative', featured ? 'h-72 md:h-96' : 'h-56']}>
+      {image ? (
+        <img
+          src={image}
+          alt={imageAlt}
+          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+          loading="lazy"
+        />
+      ) : (
+        <!-- Placeholder pattern -->
+        <div class="w-full h-full flex items-end p-6"
+             style={`background: linear-gradient(135deg, #1c2b38 0%, #0f1923 100%);`}>
+          <span class="text-cream/10 font-display text-6xl font-bold leading-none select-none">UAT</span>
+        </div>
+      )}
+      <!-- Category badge -->
+      <span class="absolute top-4 left-4 bg-accent text-light text-[10px] font-semibold tracking-[0.15em] uppercase px-3 py-1">
+        {category}
+      </span>
+    </div>
+
+    <!-- Text content -->
+    <div class="p-6">
+      <time class="text-mid text-xs tracking-wide">{formattedDate}</time>
+      <h3 class:list={[
+        'font-display text-dark mt-2 mb-3 leading-snug group-hover:text-accent transition-colors',
+        featured ? 'text-2xl lg:text-3xl' : 'text-xl',
+      ]}>
+        {title}
+      </h3>
+      <p class="text-mid text-sm leading-relaxed line-clamp-3">
+        {description}
+      </p>
+      <span class="inline-flex items-center gap-1.5 mt-5 text-dark text-sm font-medium group-hover:gap-2.5 transition-all">
+        Read article
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </div>
+  </a>
+</article>
