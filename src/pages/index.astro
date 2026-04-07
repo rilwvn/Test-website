@@ -21,7 +21,7 @@ const latestNews = allNews
 
     <!-- Arch / cream shape at bottom -->
     <div
-      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160%] h-48 md:h-64 lg:h-80 bg-cream hero-arch"
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160%] h-32 md:h-52 lg:h-72 bg-cream hero-arch"
       aria-hidden="true"
     ></div>
 
@@ -72,18 +72,19 @@ const latestNews = allNews
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-dark/10">
 
-        <!-- FTL -->
+        <!-- Agri-Food & Commodities -->
         <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
-            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Full Truckload</p>
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Agri-Food &amp; Commodities</p>
             <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
-              FTL <span class="italic font-normal">Shipping</span>
+              Food <span class="italic font-normal">Supply</span> Chains
             </h3>
-            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
-              Dedicated capacity for time-sensitive loads. Nationwide coverage, competitive rates, and proactive status updates every step of the way.
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-3">
+              Fresh and packaged foods, soybeans, fertilizers, and food packaging. We handle dry and temperature-sensitive cargo at any scale — from pallets to full truckloads.
             </p>
-            <a href="/services#ftl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+            <p class="text-accent text-xs tracking-wide font-medium group-hover:text-cream/50 transition-colors mb-6">FTL · LTL · Reefer</p>
+            <a href="/services#agri" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
               Learn more
               <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -92,18 +93,19 @@ const latestNews = allNews
           </div>
         </div>
 
-        <!-- LTL -->
+        <!-- Industrial & Raw Materials -->
         <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
-            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Less-Than-Truckload</p>
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Industrial &amp; Raw Materials</p>
             <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
-              LTL <span class="italic font-normal">Freight</span>
+              Heavy <span class="italic font-normal">Industry</span> Freight
             </h3>
-            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
-              Cost-effective for smaller shipments. Our carrier network and optimized routing deliver real-time visibility without the full-truck price tag.
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-3">
+              Steel, iron ore, rubber, construction wood, and paper production. Specialized capacity for high-volume industrial loads across North America's major freight corridors.
             </p>
-            <a href="/services#ltl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+            <p class="text-accent text-xs tracking-wide font-medium group-hover:text-cream/50 transition-colors mb-6">FTL · Flatbed · Dry Van</p>
+            <a href="/services#industrial" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
               Learn more
               <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -112,18 +114,19 @@ const latestNews = allNews
           </div>
         </div>
 
-        <!-- Reefer -->
+        <!-- Life Sciences & Export -->
         <div class="bg-cream p-8 lg:p-10 group relative overflow-hidden">
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
-            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Temperature-Controlled</p>
+            <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Life Sciences &amp; Export</p>
             <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
-              Reefer <span class="italic font-normal">Transport</span>
+              Export <span class="italic font-normal">Value</span> Chains
             </h3>
-            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
-              Protect high-value and perishable freight. Our vetted reefer carriers maintain precise temperature control from pickup to delivery.
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-3">
+              Medical devices, consumer disposables, and critical-path shipments for companies managing complex cross-border export supply chains. Canada–US specialists.
             </p>
-            <a href="/services#reefer" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
+            <p class="text-accent text-xs tracking-wide font-medium group-hover:text-cream/50 transition-colors mb-6">FTL · LTL · Cross-Border</p>
+            <a href="/services#export" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
               Learn more
               <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -186,8 +189,8 @@ const latestNews = allNews
               desc: 'Competitive rates, no hidden fees. You always know exactly what you\'re paying and why.',
             },
             {
-              title: 'Nationwide Carrier Network',
-              desc: 'Access to thousands of vetted carriers across North America ready to move your freight when you need it.',
+              title: 'Right Carrier, Every Lane',
+              desc: 'Deep relationships across a vetted carrier ecosystem covering every major North American corridor — consistent capacity, no dead ends.',
             },
           ].map(item => (
             <li class="flex gap-4 items-start">
