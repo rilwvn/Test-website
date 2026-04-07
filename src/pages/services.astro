@@ -1,41 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const checkIcon = `<svg class="w-4 h-4 text-accent flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
 ---
 
 <Layout
-  title="Freight Brokerage Services | UAT Solutions"
-  description="Optimizing logistics and transportation for seamless goods movement across North America. FTL, LTL, and temperature-controlled freight solutions."
+  title="Freight Solutions by Industry | UAT Solutions"
+  description="UAT Solutions moves agri-food commodities, industrial materials, and export value chains across Canada and the US. FTL, LTL, and reefer capacity on every lane."
 >
 
-  <!-- Page header -->
-  <section class="bg-dark pt-20 pb-32 px-6 relative overflow-hidden">
+  <!-- ═══════════════════════════════════════════
+       PAGE HEADER
+  ═══════════════════════════════════════════ -->
+  <section class="bg-dark pt-16 pb-24 px-6 relative overflow-hidden">
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160%] h-24 md:h-36 bg-cream hero-arch" aria-hidden="true"></div>
     <div class="relative z-10 max-w-3xl mx-auto text-center">
-      <span class="text-cream/50 text-xs tracking-[0.3em] uppercase font-medium">What We Offer</span>
+      <span class="text-cream/50 text-xs tracking-[0.3em] uppercase font-medium">What We Move</span>
       <h1 class="font-display text-5xl lg:text-7xl font-bold text-cream mt-4 leading-tight">
-        Freight <em class="italic font-normal">Services</em>
+        Freight <em class="italic font-normal">Solutions</em>
       </h1>
-      <p class="text-cream/70 text-base lg:text-lg mt-6 leading-relaxed">
-        Optimizing logistics and transportation for seamless goods movement across North America.
+      <p class="text-cream/70 text-base lg:text-lg mt-6 leading-relaxed max-w-xl mx-auto">
+        Industry-specific freight expertise across food supply chains, industrial commodities,
+        and cross-border export logistics.
       </p>
     </div>
   </section>
 
-  <!-- Value props bar -->
+  <!-- ═══════════════════════════════════════════
+       VALUE PROPS BAR
+  ═══════════════════════════════════════════ -->
   <section class="bg-cream-2 border-b border-dark/10">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-dark/10">
       {[
         {
-          title: 'Personalized Freight Solutions',
-          desc: 'Tailored services to meet your unique logistics and transportation needs efficiently.',
+          title: 'Every Lane, Every Load',
+          desc: 'From a single pallet to a full fleet move, we match your cargo to the right carrier with precision and speed.',
         },
         {
-          title: 'Cost Efficiency Focus',
-          desc: 'Reducing empty miles to enhance your supply chain\'s cost-effectiveness and reliability.',
+          title: 'Cross-Border Specialists',
+          desc: 'Canada–US freight is our core. Smooth coordination across customs, carriers, and corridors.',
         },
         {
-          title: 'Reliable Partnerships',
-          desc: 'Building long-lasting relationships with businesses for dependable logistics solutions.',
+          title: 'One Point of Contact',
+          desc: 'A dedicated freight advisor handles your quote, booking, and delivery updates — start to finish.',
         },
       ].map(item => (
         <div class="py-8 px-6 lg:px-10">
@@ -46,86 +53,106 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- FTL -->
-  <section id="ftl" class="bg-cream py-24 px-6 scroll-mt-20">
+  <!-- ═══════════════════════════════════════════
+       AGRI-FOOD & COMMODITIES
+  ═══════════════════════════════════════════ -->
+  <section id="agri" class="bg-cream py-24 px-6 scroll-mt-20">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
       <div class="relative">
-        <div class="aspect-[4/3] overflow-hidden bg-dark-2">
+        <div class="aspect-[4/3] overflow-hidden bg-dark-2"
+          style="background: linear-gradient(135deg, #1c3a20 0%, #0f2314 60%, #1a3a1c 100%);">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&auto=format&fit=crop&q=80"
-            alt="Full truckload freight on highway"
-            class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=80"
+            alt="Agricultural freight — grain and produce"
+            class="w-full h-full object-cover opacity-70 hover:opacity-90 hover:scale-105 transition-all duration-500"
             loading="lazy"
           />
         </div>
         <div class="absolute -bottom-3 -left-3 w-full h-full border border-accent -z-10" aria-hidden="true"></div>
       </div>
+
       <div>
-        <span class="bg-accent text-light text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Full Truckload</span>
+        <span class="bg-accent text-light text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Agri-Food &amp; Commodities</span>
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-5 mb-5 leading-tight">
-          FTL <em class="italic font-normal">Shipping</em>
+          Food <em class="italic font-normal">Supply</em> Chains
         </h2>
-        <p class="text-mid leading-relaxed mb-6">
-          Dedicated capacity for time-sensitive loads. When your shipment fills an entire truck,
-          FTL is the fastest and most direct option — and UAT Solutions makes it simple.
+        <p class="text-mid leading-relaxed mb-5">
+          Fresh produce, packaged foods, food-grade packaging, soybeans, and fertilizers require
+          precision handling and carriers who know the regulatory and temperature requirements
+          of the food supply chain.
         </p>
         <p class="text-mid leading-relaxed mb-8">
-          Our nationwide carrier network ensures competitive rates with proactive updates
-          and a dedicated account manager from first call to final delivery.
+          Whether you're moving dry goods by FTL or temperature-sensitive cargo by reefer,
+          UAT Solutions handles every detail so your product arrives on time and in specification.
         </p>
         <ul class="flex flex-col gap-3 mb-10">
-          {['Nationwide coverage across Canada & the US', 'Competitive, transparent pricing', 'Real-time shipment tracking', 'Dry van, flatbed, and reefer options', 'Dedicated account management'].map(item => (
+          {[
+            'Fresh and packaged food products',
+            'Food-grade dry van and reefer transport',
+            'Soybean, grain, and agricultural inputs',
+            'Fertilizers and crop protection goods',
+            'Food packaging, containers, and disposables',
+          ].map(item => (
             <li class="flex items-center gap-3 text-sm text-dark">
-              <svg class="w-4 h-4 text-accent flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+              <Fragment set:html={checkIcon} />
               {item}
             </li>
           ))}
         </ul>
         <a href="/contact" class="bg-accent hover:bg-accent-hover text-light font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
-          Get an FTL Quote
+          Get a Quote
         </a>
       </div>
     </div>
   </section>
 
-  <!-- LTL -->
-  <section id="ltl" class="bg-cream-2 py-24 px-6 scroll-mt-20">
+  <!-- ═══════════════════════════════════════════
+       INDUSTRIAL & RAW MATERIALS
+  ═══════════════════════════════════════════ -->
+  <section id="industrial" class="bg-cream-2 py-24 px-6 scroll-mt-20">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
       <div class="order-2 lg:order-1">
-        <span class="bg-dark text-cream text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Less-Than-Truckload</span>
+        <span class="bg-dark text-cream text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Industrial &amp; Raw Materials</span>
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-5 mb-5 leading-tight">
-          LTL <em class="italic font-normal">Freight</em>
+          Heavy <em class="italic font-normal">Industry</em> Freight
         </h2>
-        <p class="text-mid leading-relaxed mb-6">
-          Not every shipment fills a full truck — and you shouldn't pay as if it does.
-          LTL shipping lets you share trailer space with other shippers, paying only for what you use.
+        <p class="text-mid leading-relaxed mb-5">
+          Steel, iron ore, rubber, construction wood, and paper production require carriers
+          equipped for bulk and heavy loads. We source the right equipment — flatbed, dry van,
+          or specialized — for every corridor.
         </p>
         <p class="text-mid leading-relaxed mb-8">
-          UAT Solutions optimizes your LTL routes through our established carrier network,
-          ensuring competitive pricing and real-time shipment visibility for every pallet.
+          Our deep carrier relationships on North America's industrial corridors mean consistent
+          capacity and competitive rates, even for the heaviest loads on the tightest timelines.
         </p>
         <ul class="flex flex-col gap-3 mb-10">
-          {['Pay only for the space you use', 'Optimized routing for faster transit', 'Real-time shipment visibility', 'Flexible pickup scheduling', 'Ideal for 1–8 pallets'].map(item => (
+          {[
+            'Steel coils, structural steel, and plate',
+            'Iron ore and bulk minerals',
+            'Rubber and industrial compounds',
+            'Construction lumber and engineered wood',
+            'Paper, pulp, and packaging materials',
+          ].map(item => (
             <li class="flex items-center gap-3 text-sm text-dark">
-              <svg class="w-4 h-4 text-accent flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+              <Fragment set:html={checkIcon} />
               {item}
             </li>
           ))}
         </ul>
         <a href="/contact" class="bg-dark hover:bg-dark-2 text-cream font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
-          Get an LTL Quote
+          Get a Quote
         </a>
       </div>
+
       <div class="order-1 lg:order-2 relative">
-        <div class="aspect-[4/3] overflow-hidden bg-dark-2">
+        <div class="aspect-[4/3] overflow-hidden bg-dark-2"
+          style="background: linear-gradient(135deg, #1c2b38 0%, #0f1923 60%, #1a3040 100%);">
           <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80"
-            alt="Logistics warehouse with pallets"
-            class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+            src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&auto=format&fit=crop&q=80"
+            alt="Industrial freight — steel and raw materials"
+            class="w-full h-full object-cover opacity-70 hover:opacity-90 hover:scale-105 transition-all duration-500"
             loading="lazy"
           />
         </div>
@@ -134,87 +161,149 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Reefer -->
-  <section id="reefer" class="bg-cream py-24 px-6 scroll-mt-20">
+  <!-- ═══════════════════════════════════════════
+       LIFE SCIENCES & EXPORT LOGISTICS
+  ═══════════════════════════════════════════ -->
+  <section id="export" class="bg-cream py-24 px-6 scroll-mt-20">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
       <div class="relative">
-        <div class="aspect-[4/3] overflow-hidden bg-dark-2">
+        <div class="aspect-[4/3] overflow-hidden bg-dark-2"
+          style="background: linear-gradient(135deg, #2b1c38 0%, #1a0f2e 60%, #2a1a38 100%);">
           <img
-            src="https://images.unsplash.com/photo-1545987796-200677ee1011?w=900&auto=format&fit=crop&q=80"
-            alt="Temperature controlled freight transport"
-            class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&auto=format&fit=crop&q=80"
+            alt="Life sciences and export freight"
+            class="w-full h-full object-cover opacity-70 hover:opacity-90 hover:scale-105 transition-all duration-500"
             loading="lazy"
           />
         </div>
         <div class="absolute -bottom-3 -left-3 w-full h-full border border-accent -z-10" aria-hidden="true"></div>
       </div>
+
       <div>
-        <span class="bg-accent text-light text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Temperature-Controlled</span>
+        <span class="bg-accent text-light text-[10px] font-semibold tracking-[0.2em] uppercase px-3 py-1">Life Sciences &amp; Export</span>
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-5 mb-5 leading-tight">
-          Reefer <em class="italic font-normal">Transport</em>
+          Export <em class="italic font-normal">Value</em> Chains
         </h2>
-        <p class="text-mid leading-relaxed mb-6">
-          Sensitive cargo demands careful handling. Our temperature-controlled freight network
-          ensures perishable goods — food, pharmaceuticals, chemicals — arrive in perfect condition.
+        <p class="text-mid leading-relaxed mb-5">
+          Medical devices, consumer disposables, and export-critical shipments demand compliance,
+          speed, and a freight partner who understands cross-border complexity from origin to
+          final-mile delivery.
         </p>
         <p class="text-mid leading-relaxed mb-8">
-          We work with rigorously vetted reefer carriers who maintain continuous temperature
-          monitoring and compliance with all food safety regulations.
+          We specialize in Canada–US cross-border logistics for companies managing international
+          value chains — manufacturers, distributors, and export intermediaries who can't afford
+          delays at the border or in transit.
         </p>
         <ul class="flex flex-col gap-3 mb-10">
-          {['Continuous temperature monitoring', 'Food-grade and pharmaceutical-grade options', 'Full compliance with food safety regulations', 'Canada-wide and cross-border capable', 'Backup cooling on all long hauls'].map(item => (
+          {[
+            'Medical devices and healthcare equipment',
+            'Consumer disposables and personal care',
+            'Cross-border Canada–US coordination',
+            'Export supply chain management',
+            'Compliance-driven and time-sensitive loads',
+          ].map(item => (
             <li class="flex items-center gap-3 text-sm text-dark">
-              <svg class="w-4 h-4 text-accent flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+              <Fragment set:html={checkIcon} />
               {item}
             </li>
           ))}
         </ul>
         <a href="/contact" class="bg-accent hover:bg-accent-hover text-light font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
-          Get a Reefer Quote
+          Get a Quote
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Carrier section -->
-  <section id="carriers" class="bg-dark py-24 px-6 scroll-mt-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">For Carriers</span>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-cream mt-4 mb-6 leading-tight">
-          Partner <em class="italic font-normal">with us</em>
+  <!-- ═══════════════════════════════════════════
+       HOW WE MOVE IT — TRANSPORT MODES
+  ═══════════════════════════════════════════ -->
+  <section class="bg-dark py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">Transport Modes</span>
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-cream mt-3 leading-tight">
+          How we <em class="italic font-normal">move</em> it
         </h2>
-        <p class="text-cream/70 leading-relaxed mb-6">
-          Are you a carrier looking for consistent, quality loads? UAT Solutions builds long-term
-          partnerships with reliable carriers across Canada and the United States.
-        </p>
-        <p class="text-cream/70 leading-relaxed mb-10">
-          We offer fair rates, fast payment, and a dedicated team that treats you as a partner —
-          not just a truck number. Join our growing network today.
-        </p>
-        <a href="/contact" class="bg-cream hover:bg-cream-2 text-dark font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors inline-block">
-          Become a Carrier Partner
-        </a>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
         {[
-          { num: 'Fast',  label: 'Payment processing' },
-          { num: 'Fair',  label: 'Negotiated rates' },
-          { num: '24/7',  label: 'Dispatcher support' },
-          { num: 'Real',  label: 'Human relationships' },
-        ].map(item => (
-          <div class="bg-dark-2 p-6 border border-white/5">
-            <p class="font-display text-3xl font-bold text-cream">{item.num}</p>
-            <p class="text-cream/40 text-xs tracking-wide mt-1">{item.label}</p>
+          {
+            label: 'FTL',
+            name: 'Full Truckload',
+            desc: 'Dedicated trailer, direct routing, maximum speed. The right call when your shipment fills a truck or when timing is non-negotiable.',
+            tags: ['Dry Van', 'Flatbed', 'Reefer'],
+          },
+          {
+            label: 'LTL',
+            name: 'Less-Than-Truckload',
+            desc: 'Share trailer space with other shippers and pay only for the space you use. Optimized routing for 1 to 8 pallets across every lane.',
+            tags: ['Dry Van', 'Reefer', '1–8 Pallets'],
+          },
+          {
+            label: 'Reefer',
+            name: 'Temperature-Controlled',
+            desc: 'Vetted reefer carriers with continuous temperature monitoring. Available under both FTL and LTL for food, pharma, and sensitive goods.',
+            tags: ['FTL Reefer', 'LTL Reefer', 'Pharma-Grade'],
+          },
+        ].map(mode => (
+          <div class="bg-dark-2 p-8 lg:p-10">
+            <p class="font-display text-5xl font-bold text-cream/10 leading-none mb-4 select-none">{mode.label}</p>
+            <h3 class="font-display text-xl font-bold text-cream mb-3">{mode.name}</h3>
+            <p class="text-cream/60 text-sm leading-relaxed mb-6">{mode.desc}</p>
+            <div class="flex flex-wrap gap-2">
+              {mode.tags.map(tag => (
+                <span class="text-[10px] font-semibold tracking-wider uppercase text-accent border border-accent/30 px-2.5 py-1">{tag}</span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
+  <!-- ═══════════════════════════════════════════
+       CARRIER PARTNERSHIPS
+  ═══════════════════════════════════════════ -->
+  <section id="carriers" class="bg-cream-2 py-24 px-6 scroll-mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-accent text-xs tracking-[0.3em] uppercase font-semibold">For Carriers</span>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-dark mt-4 mb-6 leading-tight">
+          Partner <em class="italic font-normal">with us</em>
+        </h2>
+        <p class="text-mid leading-relaxed mb-6">
+          Looking for consistent, quality loads? UAT Solutions builds long-term partnerships
+          with reliable carriers across Canada and the United States.
+        </p>
+        <p class="text-mid leading-relaxed mb-10">
+          We offer fair rates, fast payment, and a team that treats you as a partner —
+          not just a truck number. Join our growing carrier network.
+        </p>
+        <a href="/contact" class="bg-dark hover:bg-dark-2 text-cream font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors inline-block">
+          Become a Carrier Partner
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        {[
+          { num: 'Fast',     label: 'Payment processing' },
+          { num: 'Fair',     label: 'Negotiated rates' },
+          { num: 'Direct',   label: 'Human communication' },
+          { num: 'Reliable', label: 'Consistent load volume' },
+        ].map(item => (
+          <div class="bg-cream p-6 border border-dark/10">
+            <p class="font-display text-3xl font-bold text-dark">{item.num}</p>
+            <p class="text-mid text-xs tracking-wide mt-1">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BOTTOM CTA
+  ═══════════════════════════════════════════ -->
   <section class="bg-accent py-16 px-6 text-center">
     <div class="max-w-2xl mx-auto">
       <h2 class="font-display text-4xl lg:text-5xl font-bold text-light mb-4 leading-tight">
