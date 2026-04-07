@@ -42,9 +42,6 @@ jobs:
 
       - name: Build with Astro
         run: npm run build
-        env:
-          # Injects the GitHub Pages base URL automatically
-          SITE: ${{ steps.pages.outputs.origin }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
