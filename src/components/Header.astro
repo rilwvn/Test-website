@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
     {Array(2).fill(null).map(() => (
       <span class="flex items-center gap-8 px-8">
         <span>✦ North America's Trusted Freight Partner</span>
-        <span>✦ FTL · LTL · Temperature-Controlled Shipping</span>
+        <span>✦ FTL · LTL · Partial Loads · Cross-Border Freight · Personalized Freight Services</span>
         <span>✦ 1-647-704-9045</span>
         <span>✦ contact@uat-solutions.com</span>
         <span>✦ Serving Canada &amp; the United States</span>
@@ -32,7 +32,7 @@ const currentPath = Astro.url.pathname;
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3 group" aria-label="UAT Solutions Home">
       <!-- U-Arrow Icon -->
-      <svg class="h-9 lg:h-10 w-auto flex-shrink-0" viewBox="0 0 80 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg class="h-11 lg:h-14 w-auto flex-shrink-0" viewBox="0 0 80 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
           <linearGradient id="hIconGrad" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="#CC1A2D"/>
@@ -52,10 +52,10 @@ const currentPath = Astro.url.pathname;
 
       <!-- Wordmark -->
       <span class="flex flex-col leading-none">
-        <span class="font-black text-cream text-xl lg:text-2xl tracking-tight group-hover:text-cream/90 transition-colors" style="font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em;">
+        <span class="font-black text-cream text-2xl lg:text-3xl tracking-tight group-hover:text-cream/90 transition-colors" style="font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em;">
           UAT
         </span>
-        <span class="text-[9px] lg:text-[10px] font-bold tracking-[0.22em] uppercase transition-colors" style="color: #C0192B; letter-spacing: 0.22em;">
+        <span class="text-[10px] lg:text-[12px] font-bold tracking-[0.22em] uppercase transition-colors" style="color: #C0192B; letter-spacing: 0.22em;">
           SOLUTIONS INC.
         </span>
       </span>
@@ -67,7 +67,7 @@ const currentPath = Astro.url.pathname;
         <a
           href={link.href}
           class:list={[
-            'font-body text-sm font-medium tracking-wide transition-colors',
+            'font-body text-base font-medium tracking-wide transition-colors',
             currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
               ? 'text-cream'
               : 'text-cream/60 hover:text-cream',
@@ -78,7 +78,7 @@ const currentPath = Astro.url.pathname;
       ))}
       <a
         href="/contact"
-        class="ml-2 bg-accent hover:bg-accent-hover text-light text-sm font-semibold px-5 py-2.5 transition-colors"
+        class="ml-2 bg-accent hover:bg-accent-hover text-light text-base font-semibold px-5 py-2.5 transition-colors"
       >
         Get a Quote
       </a>

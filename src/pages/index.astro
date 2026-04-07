@@ -17,7 +17,7 @@ const latestNews = allNews
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
-  <section class="bg-dark relative overflow-hidden min-h-[92vh] flex flex-col">
+  <section class="bg-dark relative overflow-hidden min-h-[72vh] flex flex-col">
 
     <!-- Arch / cream shape at bottom -->
     <div
@@ -26,9 +26,9 @@ const latestNews = allNews
     ></div>
 
     <!-- Content -->
-    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-20 pb-40 md:pb-52">
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-20 pb-24 md:pb-32">
       <p class="fade-up text-cream/50 text-xs tracking-[0.3em] uppercase mb-6 font-medium">
-        Freight Brokerage · North America
+        3PL. Technology. North America
       </p>
       <h1 class="fade-up fade-up-delay-1 font-display text-cream font-bold leading-[1.05] mb-6">
         <span class="block text-[clamp(3rem,8vw,6.5rem)]">Move More.</span>
@@ -61,7 +61,7 @@ const latestNews = allNews
   <!-- ═══════════════════════════════════════════
        SERVICES OVERVIEW
   ═══════════════════════════════════════════ -->
-  <section class="bg-cream py-24 px-6">
+  <section class="bg-cream pt-16 pb-24 px-6">
     <div class="max-w-7xl mx-auto">
 
       <!-- Section label -->
@@ -77,10 +77,10 @@ const latestNews = allNews
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
             <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Full Truckload</p>
-            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+            <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
               FTL <span class="italic font-normal">Shipping</span>
             </h3>
-            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
               Dedicated capacity for time-sensitive loads. Nationwide coverage, competitive rates, and proactive status updates every step of the way.
             </p>
             <a href="/services#ftl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
@@ -97,10 +97,10 @@ const latestNews = allNews
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
             <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Less-Than-Truckload</p>
-            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+            <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
               LTL <span class="italic font-normal">Freight</span>
             </h3>
-            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
               Cost-effective for smaller shipments. Our carrier network and optimized routing deliver real-time visibility without the full-truck price tag.
             </p>
             <a href="/services#ltl" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
@@ -117,10 +117,10 @@ const latestNews = allNews
           <div class="absolute inset-0 bg-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></div>
           <div class="relative z-10">
             <p class="text-accent text-xs tracking-[0.25em] uppercase font-medium mb-4 group-hover:text-cream/50 transition-colors">Temperature-Controlled</p>
-            <h3 class="font-display text-3xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
+            <h3 class="font-display text-4xl font-bold text-dark group-hover:text-cream transition-colors mb-4 leading-tight">
               Reefer <span class="italic font-normal">Transport</span>
             </h3>
-            <p class="text-mid text-sm leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
+            <p class="text-mid text-base leading-relaxed group-hover:text-cream/70 transition-colors mb-6">
               Protect high-value and perishable freight. Our vetted reefer carriers maintain precise temperature control from pickup to delivery.
             </p>
             <a href="/services#reefer" class="inline-flex items-center gap-2 text-dark group-hover:text-cream text-sm font-medium transition-colors">
@@ -171,7 +171,7 @@ const latestNews = allNews
         </h2>
         <p class="text-mid leading-relaxed mb-8 text-base">
           Since day one, UAT Solutions Inc. has been dedicated to removing the friction from freight.
-          We connect shippers with the right carriers — fast, reliably, and at competitive rates —
+          We connect shippers with the right carriers: fast, reliably, and at competitive rates,
           so your supply chain never misses a beat.
         </p>
 
@@ -221,8 +221,8 @@ const latestNews = allNews
       <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
         {[
           { num: '98%',  label: 'On-Time Delivery' },
-          { num: '2',    label: 'Countries Served' },
-          { num: '24/7', label: 'Support Available' },
+          { num: '5+',        label: 'Countries Served' },
+          { num: 'Same-Day',  label: 'Quote Response' },
           { num: '$0',   label: 'Hidden Fees' },
         ].map(stat => (
           <div class="text-center py-6 px-4">
@@ -312,7 +312,7 @@ const latestNews = allNews
             <p class="font-display text-xl lg:text-2xl text-dark italic leading-snug mb-8">
               "UAT Solutions transformed how we manage freight. Their team is proactive, rates are competitive,
               and we've cut our shipping delays by over <strong class="font-bold not-italic">30%</strong>.
-              They're not just a broker — they're a true logistics partner."
+              They are a true logistics partner."
             </p>
             <footer class="flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-dark-2 flex items-center justify-center text-cream font-display font-bold text-sm">M</div>
