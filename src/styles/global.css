@@ -3,13 +3,12 @@
 
 @theme {
   /* Brand Colors — from UAT Solutions Inc. logo */
-  --color-dark: #1a1b2e;        /* Deep navy  — UAT wordmark */
-  --color-dark-2: #252641;      /* Lighter navy for hover states */
+  --color-dark: #0f1923;        /* Deep navy  — UAT wordmark */
+  --color-dark-2: #1c2b38;      /* Lighter navy for hover states */
   --color-cream: #f4efe8;       /* Warm cream background */
   --color-cream-2: #ede7de;     /* Slightly darker cream */
-  --color-accent: #c0192b;      /* Crimson red — icon & SOLUTIONS INC. */
-  --color-accent-hover: #9e1422;/* Deeper crimson for hover */
-  --color-logo-pink: #f0a8b5;   /* Divider pink from logo */
+  --color-accent: #c9311a;      /* Crimson red — icon & SOLUTIONS INC. */
+  --color-accent-hover: #a82714;/* Deeper crimson for hover */
   --color-mid: #7a736d;         /* Warm gray for body text */
   --color-light: #ffffff;
 
