@@ -11,7 +11,7 @@
   --navy-mid:  #163352;
   --orange:    #e86c2c;
   --orange-lt: #f08040;
-  --cream:     #f4f1ec
+  --cream:     #f4f1ec;
   --warm-gray: #e8e4de;
   --text:      #1a1a1a;
   --text-mid:  #4a4a4a;
@@ -94,12 +94,12 @@ a { color: inherit; text-decoration: none; }
 
 .btn-ghost {
   background: transparent;
-  color: var(--white);
-  border-color: rgba(255,255,255,.85);
+    color: var(--navy);
+    border-color: var(--navy);
 }
 .btn-ghost:hover {
-  background: rgba(255,255,255,.15);
-  border-color: var(--white);
+    background: rgba(13,33,55,.08);
+    border-color: var(--navy);
 }
 
 /* Hero secondary button - visible on both dark and transitioning backgrounds */
