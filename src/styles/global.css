@@ -2,65 +2,66 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Brand Colors — from UAT Solutions Inc. logo */
-  --color-dark: #0f1923;        /* Deep navy  — UAT wordmark */
-  --color-dark-2: #1c2b38;      /* Lighter navy for hover states */
-  --color-cream: #f4efe8;       /* Warm cream background */
-  --color-cream-2: #ede7de;     /* Slightly darker cream */
-  --color-accent: #c9311a;      /* Crimson red — icon & SOLUTIONS INC. */
-  --color-accent-hover: #a82714;/* Deeper crimson for hover */
-  --color-mid: #7a736d;         /* Warm gray for body text */
+    /* Brand Colors — from UAT Solutions Inc. logo */
+  --color-dark: #1a1b2e;         /* Deep navy  — UAT wordmark */
+  --color-dark-2: #252641;       /* Lighter navy for hover states */
+  --color-cream: #f4efe8;        /* Warm cream background */
+  --color-cream-2: #ede7de;      /* Slightly darker cream */
+  --color-accent: #c0192b;       /* Crimson red — icon & SOLUTIONS INC. */
+  --color-accent-hover: #9e1422; /* Deeper crimson for hover */
+  --color-logo-pink: #f0a8b5;    /* Divider pink from logo */
+  --color-mid: #7a736d;          /* Warm gray for body text */
   --color-light: #ffffff;
 
   /* Typography */
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
   /* Spacing scale additions */
   --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-  --spacing-28: 7rem;
-  --spacing-36: 9rem;
+    --spacing-22: 5.5rem;
+    --spacing-28: 7rem;
+    --spacing-36: 9rem;
 }
 
 /* Base */
 html {
-  font-family: var(--font-body);
-  color: var(--color-dark);
-  background-color: var(--color-cream);
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-cream);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* Display headings use Playfair */
 .font-display {
-  font-family: var(--font-display);
+    font-family: var(--font-display);
 }
 
 /* Ticker animation */
 @keyframes ticker {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 .ticker-track {
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
 }
 .ticker-track:hover {
-  animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 /* Fade-up animation */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 .fade-up {
-  animation: fadeUp 0.7s ease both;
+    animation: fadeUp 0.7s ease both;
 }
 .fade-up-delay-1 { animation-delay: 0.1s; }
 .fade-up-delay-2 { animation-delay: 0.2s; }
@@ -68,73 +69,73 @@ body {
 
 /* Mobile nav */
 #mobile-nav {
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity   0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.35s ease;
 }
 #mobile-nav.closed {
-  transform: translateX(100%);
-  opacity: 0;
-  pointer-events: none;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
 }
 #mobile-nav.open {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: all;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
 }
 
 /* Nav sticky style */
 .nav-scrolled {
-  background: rgba(15, 25, 35, 0.97) !important;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    background: rgba(26, 27, 46, 0.97) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.06);
 }
 
 /* Hero arch shape */
 .hero-arch {
-  clip-path: ellipse(70% 100% at 50% 100%);
+    clip-path: ellipse(70% 100% at 50% 100%);
 }
 
 /* Card hover lift */
 .card-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .card-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(15,25,35,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(26,27,46,0.12);
 }
 
 /* Underline link style */
 .link-underline {
-  position: relative;
-  text-decoration: none;
+    position: relative;
+    text-decoration: none;
 }
 .link-underline::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s ease;
 }
 .link-underline:hover::after {
-  transform: scaleX(0);
-  transform-origin: right;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 /* Prose overrides for news articles */
 .prose-uat {
-  --tw-prose-body: #0f1923;
-  --tw-prose-headings: #0f1923;
-  --tw-prose-links: #c9311a;
-  --tw-prose-bold: #0f1923;
-  --tw-prose-quotes: #0f1923;
-  --tw-prose-quote-borders: #c9311a;
-  font-family: var(--font-body);
+    --tw-prose-body: #1a1b2e;
+    --tw-prose-headings: #1a1b2e;
+    --tw-prose-links: #c0192b;
+    --tw-prose-bold: #1a1b2e;
+    --tw-prose-quotes: #1a1b2e;
+    --tw-prose-quote-borders: #c0192b;
+    font-family: var(--font-body);
 }
 .prose-uat h2, .prose-uat h3 {
-  font-family: var(--font-display);
+    font-family: var(--font-display);
 }
