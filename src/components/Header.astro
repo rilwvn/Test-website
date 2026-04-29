@@ -30,14 +30,36 @@ const currentPath = Astro.url.pathname;
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
 
     <!-- Logo -->
-            <a href="/" class="flex flex-col leading-none group" aria-label="UAT Solutions Home">
-          <span class="font-display font-bold text-cream text-lg lg:text-xl tracking-tight group-hover:text-cream/80 transition-colors">
-            UAT SOLUTIONS
-          </span>
-          <span class="font-body font-light text-cream/50 text-[10px] tracking-[0.25em] uppercase">
-            Inc. — Freight Brokerage
-          </span>
-        </a>
+    <a href="/" class="flex items-center gap-3 group" aria-label="UAT Solutions Home">
+      <!-- U-Arrow Icon -->
+      <svg class="h-11 lg:h-14 w-auto flex-shrink-0" viewBox="0 0 80 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="hIconGrad" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#CC1A2D"/>
+            <stop offset="60%" stop-color="#B0151F"/>
+            <stop offset="100%" stop-color="#8A0F18"/>
+          </linearGradient>
+        </defs>
+        <rect x="2"    y="22" width="21" height="56" rx="5"  fill="url(#hIconGrad)"/>
+        <rect x="57"   y="22" width="21" height="56" rx="5"  fill="url(#hIconGrad)"/>
+        <rect x="2"    y="62" width="76" height="24" rx="12" fill="url(#hIconGrad)"/>
+        <rect x="29.5" y="26" width="21" height="56"         fill="url(#hIconGrad)"/>
+        <polygon points="40,2 16,26 64,26" fill="#CC1A2D"/>
+      </svg>
+
+      <!-- Divider -->
+      <span class="hidden sm:block h-8 w-px opacity-40" style="background: #F0A8B5;"></span>
+
+      <!-- Wordmark -->
+      <span class="flex flex-col leading-none">
+        <span class="font-black text-cream text-2xl lg:text-3xl tracking-tight group-hover:text-cream/90 transition-colors" style="font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em;">
+          UAT
+        </span>
+        <span class="text-[10px] lg:text-[12px] font-bold tracking-[0.22em] uppercase transition-colors" style="color: #C0192B; letter-spacing: 0.22em;">
+          SOLUTIONS INC.
+        </span>
+      </span>
+    </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
@@ -80,10 +102,25 @@ const currentPath = Astro.url.pathname;
   <div class="flex items-center justify-between px-6 h-16 border-b border-white/10">
 
     <!-- Logo in drawer -->
-              <a href="/" class="flex flex-col leading-none">
-            <span class="font-display font-bold text-cream text-lg tracking-tight">UAT SOLUTIONS</span>
-            <span class="font-body font-light text-cream/50 text-[10px] tracking-[0.25em] uppercase">Inc.</span>
-          </a>
+    <a href="/" class="flex items-center gap-3">
+      <svg class="h-9 w-auto" viewBox="0 0 80 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="mIconGrad" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#CC1A2D"/>
+            <stop offset="100%" stop-color="#8A0F18"/>
+          </linearGradient>
+        </defs>
+        <rect x="2"    y="22" width="21" height="56" rx="5"  fill="url(#mIconGrad)"/>
+        <rect x="57"   y="22" width="21" height="56" rx="5"  fill="url(#mIconGrad)"/>
+        <rect x="2"    y="62" width="76" height="24" rx="12" fill="url(#mIconGrad)"/>
+        <rect x="29.5" y="26" width="21" height="56"         fill="url(#mIconGrad)"/>
+        <polygon points="40,2 16,26 64,26" fill="#CC1A2D"/>
+      </svg>
+      <span class="flex flex-col leading-none">
+        <span class="font-black text-cream text-xl tracking-tight" style="font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;">UAT</span>
+        <span class="text-[9px] font-bold tracking-[0.22em] uppercase" style="color: #C0192B;">SOLUTIONS INC.</span>
+      </span>
+    </a>
 
     <button id="mobile-close" class="text-cream/70 hover:text-cream p-2" aria-label="Close menu">
       <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
