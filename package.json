@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.4",
-    "astro": "^5.5.5"
+    "@astrojs/mdx": "^5.0.4",
+    "astro": "^6.2.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
