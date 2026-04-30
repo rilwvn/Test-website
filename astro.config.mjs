@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://uat-solutions.com',
+  site: 'https://www.uat-solutions.com',
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],
