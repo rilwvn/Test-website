@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100" width="560" height="200" role="img" aria-label="UAT Solutions Inc. logo">
+  <title>UAT Solutions Inc.</title>
+
+  <!-- Icon (U-arrow mark) -->
+  <svg x="16" y="6" width="80" height="88" viewBox="0 0 80 88">
+    <defs>
+      <linearGradient id="iconGradL" x1="40" y1="0" x2="40" y2="88" gradientUnits="userSpaceOnUse">
+        <stop offset="0%"   stop-color="#CC1A2D"/>
+        <stop offset="60%"  stop-color="#B0151F"/>
+        <stop offset="100%" stop-color="#8A0F18"/>
+      </linearGradient>
+    </defs>
+    <rect x="2"    y="22" width="21" height="56" rx="5"  fill="url(#iconGradL)"/>
+    <rect x="57"   y="22" width="21" height="56" rx="5"  fill="url(#iconGradL)"/>
+    <rect x="2"    y="62" width="76" height="24" rx="12" fill="url(#iconGradL)"/>
+    <rect x="29.5" y="26" width="21" height="56"         fill="url(#iconGradL)"/>
+    <polygon points="40,2 16,26 64,26"                   fill="#CC1A2D"/>
+  </svg>
+
+  <!-- Divider -->
+  <line x1="108" y1="22" x2="108" y2="78" stroke="#1a1b2e" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- UAT wordmark -->
+  <text
+    x="122" y="64"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="48"
+    fill="#1a1b2e"
+    letter-spacing="-1">UAT</text>
+
+  <!-- SOLUTIONS INC. -->
+  <text
+    x="124" y="80"
+    font-family="Arial, 'Helvetica Neue', Helvetica, sans-serif"
+    font-weight="700"
+    font-size="11"
+    fill="#c0192b"
+    letter-spacing="3">SOLUTIONS INC.</text>
+</svg>
