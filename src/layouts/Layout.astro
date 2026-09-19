@@ -56,45 +56,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
     />
   </head>
-  <body class="bg-cream text-dark">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-
-    <script>
-      // Sticky nav scroll behavior
-      const header = document.querySelector('#site-header') as HTMLElement | null;
-      if (header) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 60) {
-            header.classList.add('nav-scrolled');
-          } else {
-            header.classList.remove('nav-scrolled');
-          }
-        }, { passive: true });
-      }
-
-      // Mobile menu toggle
-      const hamburger = document.querySelector('#hamburger-btn');
-      const mobileNav = document.querySelector('#mobile-nav');
-      const closeBtn = document.querySelector('#mobile-close');
-
-      function openNav() {
-        mobileNav?.classList.remove('closed');
-        mobileNav?.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeNav() {
-        mobileNav?.classList.remove('open');
-        mobileNav?.classList.add('closed');
-        document.body.style.overflow = '';
-      }
-
-      hamburger?.addEventListener('click', openNav);
-      closeBtn?.addEventListener('click', closeNav);
-      mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
-    </script>
+  <body style="margin:0;font-family:'Inter',system-ui,sans-serif;background:#0d2137;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Inter:wght@400;600&display=swap');
+      .maint-logo { display:flex;align-items:center;gap:.75rem;justify-content:center;margin-bottom:3rem; }
+      .maint-icon { background:#fff;width:48px;height:48px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700; }
+      .maint-icon .u { color:#0d2137; }
+      .maint-icon .arr { color:#e86c2c; }
+      .maint-logo-text { text-align:left;line-height:1.1; }
+      .maint-logo-text strong { display:block;font-size:1.05rem;letter-spacing:.04em; }
+      .maint-logo-text span { font-size:.58rem;letter-spacing:.12em;opacity:.5; }
+      .maint-h1 { font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:500;line-height:1.1;margin-bottom:1.25rem; }
+      .maint-h1 em { font-style:italic;color:#e86c2c; }
+      .maint-p { font-size:1rem;color:rgba(255,255,255,.55);max-width:420px;line-height:1.7;margin:0 auto 2.5rem; }
+      .maint-btn { display:inline-block;background:#e86c2c;color:#fff;padding:.8rem 2rem;border-radius:50px;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;transition:background .2s; }
+      .maint-btn:hover { background:#f08040; }
+    </style>
+    <div class="maint-logo">
+      <div class="maint-icon"><span class="u">U</span><span class="arr">↑</span></div>
+      <div class="maint-logo-text">
+        <strong>UAT</strong>
+        <span>SOLUTIONS INC.</span>
+      </div>
+    </div>
+    <h1 class="maint-h1">We'll be back <em>soon.</em></h1>
+    <p class="maint-p">Our website is temporarily offline for scheduled maintenance. We'll be back up shortly — thank you for your patience.</p>
+    <a href="mailto:dispatch@uat-solutions.com" class="maint-btn">Contact Us →</a>
   </body>
 </html>
